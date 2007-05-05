@@ -1,0 +1,412 @@
+digraph "vection_01.core.models" {
+	graph [fontname=Helvetica, fontsize=8];
+	node [label="\N", fontname=Helvetica, fontsize=8, shape=plaintext];
+	edge [fontname=Helvetica, fontsize=8];
+	graph [bb="0,0,1114,842"];
+	ProjectComponent [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >ProjectComponent</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">name</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">desc</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">default_engineer</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">project_for_component</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+    </TABLE>
+    >, pos="1036,390", width="2.17", height="1.17"];
+	UserProfile [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >UserProfile</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">url</FONT
+     ></TD>
+     <TD ALIGN="LEFT">URLField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">user</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">avatar_url</FONT
+     ></TD>
+     <TD ALIGN="LEFT">URLField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">tagline</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+    </TABLE>
+    >, pos="201,124", width="1.47", height="1.17"];
+	Project [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Project</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">name</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">tag</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">desc</FONT
+     ></TD>
+     <TD ALIGN="LEFT">TextField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">project_lead</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+    </TABLE>
+    >, pos="344,254", width="1.58", height="1.17"];
+	IssueUpdate [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >IssueUpdate</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">fields</FONT
+     ></TD>
+     <TD ALIGN="LEFT">TextField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">comment</FONT
+     ></TD>
+     <TD ALIGN="LEFT">TextField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">made</FONT
+     ></TD>
+     <TD ALIGN="LEFT">DateTimeField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">user</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">issue</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+    </TABLE>
+    >, pos="125,794", width="1.58", height="1.33"];
+	Issue [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Issue</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">title</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">issue_type</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">project</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">sub_component</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">priority</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">status</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">resolution</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">description</FONT
+     ></TD>
+     <TD ALIGN="LEFT">TextField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">version</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">environment</FONT
+     ></TD>
+     <TD ALIGN="LEFT">TextField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">created_by</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">responsible_user</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">due_date</FONT
+     ></TD>
+     <TD ALIGN="LEFT">DateField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">created</FONT
+     ></TD>
+     <TD ALIGN="LEFT">DateTimeField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">last_updated</FONT
+     ></TD>
+     <TD ALIGN="LEFT">DateTimeField</TD></TR>
+     
+    </TABLE>
+    >, pos="415,592", width="1.97", height="3.00"];
+	IssueType [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >IssueType</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">type</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">description</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">icon</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">position</FONT
+     ></TD>
+     <TD ALIGN="LEFT">PositiveIntegerField</TD></TR>
+     
+    </TABLE>
+    >, pos="259,390", width="1.92", height="1.17"];
+	Priority [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Priority</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">name</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">description</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">icon</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">position</FONT
+     ></TD>
+     <TD ALIGN="LEFT">PositiveIntegerField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">colour</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+    </TABLE>
+    >, pos="415,390", width="1.92", height="1.33"];
+	Status [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Status</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">status</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">description</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">position</FONT
+     ></TD>
+     <TD ALIGN="LEFT">PositiveIntegerField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">icon</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+    </TABLE>
+    >, pos="571,390", width="1.92", height="1.17"];
+	Resolution [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >Resolution</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">type</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">description</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+    </TABLE>
+    >, pos="710,390", width="1.44", height="0.83"];
+	ProjectVersion [label=<
+    <TABLE BGCOLOR="palegoldenrod" BORDER="0" CELLBORDER="0" CELLSPACING="0">
+     <TR><TD COLSPAN="2" CELLPADDING="4" ALIGN="CENTER" BGCOLOR="olivedrab4"
+     ><FONT FACE="Helvetica Bold" COLOR="white"
+     >ProjectVersion</FONT></TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">id</FONT
+     ></TD>
+     <TD ALIGN="LEFT">AutoField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">name</FONT
+     ></TD>
+     <TD ALIGN="LEFT">CharField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">released</FONT
+     ></TD>
+     <TD ALIGN="LEFT">NullBooleanField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">release_date</FONT
+     ></TD>
+     <TD ALIGN="LEFT">DateField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">unnasigned</FONT
+     ></TD>
+     <TD ALIGN="LEFT">BooleanField</TD></TR>
+     
+     <TR><TD ALIGN="LEFT" BORDER="0"
+     ><FONT FACE="Helvetica Bold">project_for_version</FONT
+     ></TD>
+     <TD ALIGN="LEFT">ForeignKey</TD></TR>
+     
+    </TABLE>
+    >, pos="860,390", width="2.22", height="1.33"];
+	User [pos="201,18", width="0.75", height="0.50"];
+	ProjectComponent -> UserProfile [label=ForeignKey, pos="e,254,129 982,348 965,336 945,323 925,314 647,184 560,184 264,131", lp="908,254"];
+	ProjectComponent -> Project [label=ForeignKey, pos="e,401,257 964,348 959,346 954,344 949,342 857,310 613,288 518,273 477,266 467,263 427,259 422,258 417,258 411,257", lp="905,319"];
+	Project -> UserProfile [label=ForeignKey, pos="e,247,166 298,212 284,199 269,186 255,173", lp="295,189"];
+	IssueUpdate -> UserProfile [label=ForeignKey, pos="e,148,137 82,746 53,707 18,649 18,592 18,592 18,592 18,254 18,178 71,166 138,141", lp="38,390"];
+	IssueUpdate -> Issue [label=ForeignKey, pos="e,344,641 182,754 226,724 287,681 336,647", lp="246,723"];
+	Issue -> IssueType [label=ForeignKey, pos="e,292,432 344,500 328,479 312,458 298,440", lp="337,461"];
+	Issue -> Project [label=ForeignKey, pos="e,287,261 344,580 242,538 191,535 141,438 121,400 117,377 141,342 171,296 230,274 277,263", lp="161,390"];
+	Issue -> ProjectComponent [label=ForeignKey, pos="e,961,432 486,588 503,586 522,583 539,580 727,538 772,516 949,438 950,438 951,437 952,437", lp="922,461"];
+	Issue -> Priority [label=ForeignKey, pos="e,415,438 415,484 415,472 415,460 415,448", lp="435,461"];
+	Issue -> Status [label=ForeignKey, pos="e,538,432 486,500 502,479 518,458 532,440", lp="538,461"];
+	Issue -> Resolution [label=ForeignKey, pos="e,684,420 486,580 564,543 637,472 677,428", lp="668,461"];
+	Issue -> ProjectVersion [label=ForeignKey, pos="e,789,438 486,584 495,583 502,581 507,580 607,547 711,487 780,444", lp="777,461"];
+	Issue -> UserProfile [label=ForeignKey, pos="e,173,166 344,584 338,583 332,581 326,580 218,551 165,539 119,438 96,387 95,367 108,314 119,264 146,212 168,175", lp="128,319"];
+	ProjectVersion -> Project [label=ForeignKey, pos="e,401,260 780,345 777,344 774,343 771,342 648,297 496,273 411,261", lp="733,319"];
+	UserProfile -> User [label=ForeignKey, pos="e,201,36 201,82 201,70 201,57 201,46", lp="221,59"];
+}

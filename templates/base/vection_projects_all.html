@@ -1,0 +1,43 @@
+{% extends "base/vection.html" %}
+
+{% block title %}
+All Projects ::
+{% endblock %}
+
+{% block content %}
+<div id="project_list_box">
+
+<h1 class="headings">
+<a alt="Get An Rss Feed for all prjects" href="/vection/feeds/all_projects/"><img src='/media/images/icons/rss/feed-icon-16x16.png'></img></a>
+All Projects <br/>&nbsp;
+ 
+ </h1>
+
+ 
+
+ {% if user.is_superuser %}
+   <h3 class="headings"><a title="Create A New Project" href="/vection/projects/new/">Create A New Project</a></h3>
+ {% endif %}
+ 
+
+ 
+</div>
+
+{% for pro in projects_list %}
+	<div id="project_list_box">
+	
+	  <h1 class="headings">
+	   <a title="View {{ pro.name }}" href="/vection/projects/{{ pro.name }}">{{ pro.name }}</a> 
+	  </h1>
+	  <p class="headings"><b>Description:</b> {{ pro.desc }} 
+	  <p class="headings"><b>Project Owner:</b>
+	    {{pro.project_lead.user.first_name}} 
+	    {{pro.project_lead.user.last_name}}
+	    (<a title="Visit User Page" 
+	    href="/vection/users/{{ pro.project_lead.user.username }}">
+	    {{ pro.project_lead.user.username }}</a>)</p>
+	    
+	  <br/>
+	</div>
+{% endfor %}
+{% endblock %}

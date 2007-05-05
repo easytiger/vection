@@ -1,0 +1,77 @@
+{% extends "base/vection.html" %}
+
+{% block title %}
+{{ pro.name }} ::
+{% endblock %}
+
+{% block content %}
+
+<h1 class="headings">
+<a title="See All Projects" href="/vection/projects">All Projects :</a> 
+{{ pro.name }} <font size="2">(TAG: {{ pro.tag }})</font>
+</h1>
+<p class="headings"><b>Description:</b> {{ pro.desc }}</p>
+<p class="headings"><b>Project Owner:</b>
+{{pro.project_lead.user.first_name}} 
+{{pro.project_lead.user.last_name}}
+
+
+(<a title="Visit User Page" href="/vection/users/{{ pro.project_lead.user.username }}">{{ pro.project_lead.user.username }}</a>)</p>
+<p>
+
+<br />
+<b>Tools:</b>
+{% if user.is_superuser %} 
+  <a title="Edit {{ pro.name }}" href="/vection/projects/edit/{{ pro.name }}">
+  	Edit This Project's Settings</a>
+{% endif %}
+ |  <a title="Create a New Issue" href="/vection/new-issue/{{ pro.name }}">Create A new Issue</a>
+ |  <a title="View Open Issues" href="/vection/issues/{{ pro.name }}">View Open Issues</a>
+</p>
+
+<div class="project_boxes">
+<div id="itemlister_left">
+
+ <h3>{{ pro.name }} subcomponents
+ {% if user.is_superuser %}
+  <a class="edit" title="New Subcomponent" href="/vection/new_sub/{{ pro.name }}/">(add new)</a>
+ {% endif %}
+ </h3> <br/>
+ 
+  <table id="overview">
+	  {% for p in pro.projectcomponent_set.all %}
+	  <tr>
+	    <td><a title="See issues for {{ p.name }}" href="/vection/comp-issues/{{ p.id }}">{{ p.name }}</a></td>
+	    <td><i>{{ p.desc|truncatewords:"5" }}</i>
+	    {% if user.is_superuser %}
+	    <a class="edit" title="Edit subcomponent" href="/vection/edit_comp/{{ pro.name }}/{{p.name}}">(edit)</a>
+	    {% endif %}
+	  </td>
+  </tr>
+  {% endfor %}
+  </table>
+
+</div>
+
+<div id="itemlister_right"> 
+  <h3>{{ pro.name }} versions
+   {% if user.is_superuser %}
+   <a class="edit" title="Add A New Version" href="/vection/new_ver/{{ pro.name }}">(add new)</a>
+   {% endif %}
+  </h3> 
+  <br/>
+  <table id="overview">
+  {% for v in pro.projectversion_set.all %}
+   <tr>
+    <td><a title="See issues" href="/vection/projects/{{ pro.name }}/version/{{ p.name }}">{{ v.name }}</a></td>
+    <td><i>{{ v.desc }}</i>
+  
+    </td>
+   </tr>
+  {% endfor %}
+  </table>
+  
+</div>
+
+</div>
+{% endblock %}

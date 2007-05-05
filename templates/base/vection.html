@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>{% block title %} {% endblock %} Vection Issue Management</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+  <link rel="stylesheet" type="text/css" href="/media/vection.css" />
+  
+  </head>
+<body>
+  <div id="head-padding">
+    <div id="page-head">
+    
+      <div id="user-info">
+	<div id="user-avatar">
+                <img src="/media/images/linux-penguin-small.jpg" width="55" height="65" align="middle" /> 
+	</div>
+	<div id="user-welcome">
+		<b>Logged in: {{user.username}}</b>
+	</div>
+	<div id="user-welcome">
+		You have <b>{{ user.get_profile.open_issue_count }}</b> outstanding issues
+	</div>
+	<div id="user-welcome">
+		{% if user.is_superuser %}
+			You are a superuser
+		{% else %}
+			Normal User
+		{% endif %}
+	</div>
+	<div id="user-welcome">
+		<a title="default design" href="/vection/logout">Logout {{user.username}}</a>
+	</div>
+      </div>
+
+      <div id="head-img">
+        <img src="/media/images/base/v2.png" align="right" alt=
+        "Vection Issue Management" />
+      </div>
+    </div>
+  </div>
+
+  <div id="menu-padding">
+    <div id="menu">
+      <ul>
+        <li>
+        <a title="default design" href="/vection/new-issue">
+        New Issue</a>
+        
+        </li>
+		<li>
+        <li><a title="View projects" href="/vection/projects">
+        Browse Projects</a></li>
+
+        <li><a title="Your home page" href="/vection/home">
+        Your Page</a></li>
+        
+	{% if user.is_superuser %}
+		<li><a title="User administration" href="/vection/admin/">
+		User Admin</a></li>	
+	{% endif %}
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+  	{# if superuser, give create project option #}
+	{# 	<div id="sidebar">&nbsp;</div> 	#}
+	 
+	<div id="content">
+	{% block content %} {% endblock %}
+	</div>
+  </div>
+  
+  <div id="gap">
+  	&nbsp;
+  </div>
+  
+<div id="footer">
+	Vection Issue Management &#xA9; 2007  <a title="d" href="http://belfast.no-ip.org/">gerry steele</a>
+</div>
+
+</body>
+</html>
