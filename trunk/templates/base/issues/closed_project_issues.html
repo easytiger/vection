@@ -1,0 +1,74 @@
+{% extends "base/vection.html" %}
+
+{% block title %}
+Closed Issues for {{ project.name }} ::
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="headings">Closed Issues For <a href="/vection/projects/{{ project }}">{{ project }}</a></h1>
+<table class="issues" border="1">
+<br/>
+<p class="headings">
+  <b><a href="/vection/issues/{{ project }}/">View Open Bugs</a> </b>|
+  Sort by: </b>
+  <a href="/vection/closed-issues/{{ project }}/?sortby=status">Status</a> -
+  <a href="/vection/closed-issues/{{ project }}/?sortby=prioritydes">Priority(des)</a> -
+  <a href="/vection/closed-issues/{{ project }}/?sortby=priorityasc">Priority(asc)</a> -
+  <a href="/vection/closed-issues/{{ project }}/?sortby=updated">Updated</a> -
+  <a href="/vection/closed-issues/{{ project }}/?sortby=created">Newest</a> -
+  <a href="/vection/closed-issues/{{ project }}/?sortby=comp">Component</a> -
+</p>
+</br>
+
+<tr class="headerrow">
+  <th  class="issueid">
+    Issue ID
+  </th>
+  
+  <th class="issueid">
+    Title
+  </th>
+  <th class="issueid">
+    Status
+  </th>
+  <th class="issueid">
+    Type
+  </th>
+  <th class="issueid">
+    Owner
+  </th>
+  
+  <th class="issueid">
+    Component
+  </th>
+  
+  <th class="issueid">
+    Version
+  </th>
+  
+  <th class="issueid">
+    Priority
+  </th>
+   
+  
+</tr>
+
+
+{% for i in closed_issues %}
+<tr onmouseover="this.className='tablehover'" onmouseout="this.className='issueid'">
+  <td  class="issueid" > <a class="edit" href="/vection/issues/{{ i.id }}">{{ i.tag }} </a></td>
+  <td  class="issueid edit2"  style="background: {{ i.priority.colour }};"><a class="darklink" href="/vection/issues/{{ i.id }}"> <b>{{ i.title|truncatewords:"10" }}</a></b> </td>
+  <td  class="issueid edit2"><img src="{{ i.status.icon }}"/>  {{ i.status }} </td>
+  <td  class="issueid edit2"> {{ i.issue_type }} </td>
+  <td  class="issueid edit2"> {{ i.responsible_user.fullname }} </td>
+  <td  class="issueid edit2"> {{ i.sub_component }} </td>
+  <td  class="issueid edit2"> {{ i.version }} </td>
+  <td  class="issueid edit2"> <img src="{{ i.priority.icon }}"/> {{ i.priority }} </td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

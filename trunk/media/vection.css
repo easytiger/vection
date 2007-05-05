@@ -1,0 +1,383 @@
+
+* { margin: 0; padding: 0; }
+html{ height: 99% }	
+body{min-height: 100%;}
+
+img{
+	border: none;	
+}
+
+hr {
+color: #a09899;
+
+width: 100%
+}
+
+body {
+	margin: 0 0 1em 0;
+	padding: 0;
+	color: black;
+	background: #eee;
+	line-height: 130%;
+	font-family: arial, helvetica, verdana, tahoma, sans-serif;
+	font-size: small;
+	text-align: center;
+	height: 85%;
+	background: #a09899 url("/media/images/base/grad_back.gif") 0 0 repeat-x;
+}
+
+p, .headings {
+	text-align: left;
+	padding-top: 0.5em;
+	padding-left: 5px;
+	color: black;
+}
+
+.footings {text-align: left; font-size: xx-small;}
+
+.comment{
+	padding-left: 10px;
+}
+
+.heads{
+	color: black;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color:#C8581C ;
+}
+
+.edit { font-size: x-small; }
+.edit2 { font-size: .80em; }
+
+a:hover{
+	
+	background: #FFF86C;
+}
+
+
+/* top of page banner heading */
+#head-padding {
+/* nothing here anymore */
+	min-width: 650px;
+}
+
+#page-head {
+	background:  url('/media/images/base/back.png') ; 
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	margin: 0 auto;
+	text-align: left;
+	
+}
+
+#head-img {
+	float: right;	
+	width: 344px;
+}
+/* top of page horizontal nav */
+#menu-padding {
+	background: #88ac0b url('/media/images/base/menu-background.png') top left repeat-x;
+	float: left;
+	width: 100%;
+}
+
+#menu li { display: inline; }
+
+#menu {
+	width: 99%;
+	margin: 0 auto;
+	font-size: 90%;
+	white-space: nowrap;
+	padding-right: 2px;
+}
+
+#menu ul {
+	margin  : 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	border-left: 1px solid #95bc0e;
+	/*border-right: 1px solid #95bf0f;*/
+}
+
+
+
+#menu a:link, #menu a:visited {
+	padding: 0.25em 1em;
+	background: transparent;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #95bc0e;
+	
+}
+
+#menu a:hover {
+	background: #b6e41c url('/media/images/base/menu-hover.png') repeat-x;
+	color: #485b06;
+}
+
+/* end of menu stuff */
+
+/* top user tools nav */
+
+#user-info {
+	margin-top: 7px;
+	margin-left: 5px;
+	float: left;
+	border: 1px solid #959595;
+	width: 270px;
+	height: 65px;
+	font-family: Arial, sans-serif;
+	
+	background:  url('/media/images/grad1.png')
+}
+#user-avatar {
+	float: left;
+	border-right: 1px solid #959595;
+
+}
+
+#user-welcome{
+	font-size: 12px;
+	margin-left: 60px;
+	line-height: 12px;
+	padding: 2px;
+	font-size: 80%;
+}
+
+/* css for rounded divs 
+*/
+
+#main {
+	padding: 0em;
+	margin-top: 28px;
+	margin-left: 4px;
+	margin-right: 4px;
+	background: #EEEEEE;
+	border: 1px solid #95bc0e;
+	min-height: 88%;
+	overflow: hidden;
+	
+}
+
+#footer {
+	margin: 0 auto;
+	padding: 1px 1%;
+	margin-left: 4px;
+	margin-bottom: 5px;
+	width: 40%;
+	text-align: right;
+	color: white;
+	letter-spacing: 0.15em;
+	background: #88ac0b url('/media/images/base/menu-background.png') top left repeat-x;
+	border: 1px solid #a0c80e;
+	font-size: 80%;
+}
+
+#gap {
+margin: 0 auto;
+	padding: 2px 1%;
+	margin-left: 4px;
+	width: 40%;
+	height: 1px;
+	
+}
+
+#sidebar{
+	width: 170px;
+	border-right: 1px solid #a0c80e;
+	border-bottom: 1px solid #a0c80e;
+	float: left;	
+	margin-bottom: -1000px;
+	padding-bottom: 1000px; /* complete hack to make this div fill parent */
+}
+
+#sidebar-menu{
+`	
+}
+
+/* content blocks for projects components etc */
+
+#project_list_box {
+	background: #ffffdd;
+	padding: 0.25em;
+	margin-top: 1em;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 1em;
+	border: 1px dotted #a0c80e;
+	
+}
+
+#update_box {
+	background: #F7F7F7;
+	padding: 0.25em;
+	margin-top: 1em;
+	margin-left: 45px;
+	margin-right: 30px;
+	margin-bottom: 1em;
+	border: 1px dotted #a0c80e;
+	
+}
+
+#inner_update_box {
+	background: #F7F7F7;
+	padding: 0.25em;
+	margin-top: 1em;
+	margin-left: 45px;
+	margin-right: 30px;
+	margin-bottom: 1em;
+	border: 1px dotted #E6E6E6;
+	
+}
+
+
+
+#itemlister_left {
+	background: #ffffdd;
+	padding: 0.25em;
+	width: 65%;
+	margin-top: 1em;
+	margin-left: 5px;
+	border: 1px dotted #a0c80e;
+	float: left;
+	text-align: left;
+}
+
+#itemlister_right {
+	padding: 0.25em;
+	background: #ffffdd;
+	width: 30%;
+	margin-top: 1em;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 1px dotted #a0c80e ;
+	float: left;
+	text-align: left;
+}
+
+#overview, table {
+	border-width: 0px;
+	border-style: solid solid solid solid;
+	width: 90%;
+}
+
+/* Form styling */
+
+.formheadings {
+	text-align: left;
+	padding-top: 0.5em;
+	padding-left: 30px;
+	color: black;
+}
+
+#formbox{
+	
+	background: #ffffdd;
+	padding: 0.25em;
+	margin-top: 1em;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 1em;
+	border: 1px solid #a0c80e;
+	width: 550px;
+	min-width: 500px;
+	/* margin: 0 auto; */
+	
+}
+
+
+
+form {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+
+	
+	width: 590px;
+}
+
+input, select, textarea {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 100%;
+	color: #000000;
+	width: 400px;
+}
+
+
+
+textarea {
+	height: 10em;
+	width: 400px;
+}
+
+input, textarea, select
+{
+	float: left;	
+	border: 1px dotted #a0c80e;
+}
+
+
+
+label{ float: right; padding: 1em;  }
+
+.errorlist { color: red; text-align: left; }
+
+#issue.td {
+color: pink	
+}
+
+td{
+	text-align: left;
+	
+}
+
+th {
+	font-style: bold;
+	text-align: left;
+}
+
+td, th {
+border-bottom: 1px dotted #EAEACB;	
+border-collapse: collapse;
+}
+
+ul{ text-align: left; padding-left: 1.25em;}
+/* actions like new issue, etc */
+#
+#bugtable{
+	margin-left: 5px;
+	width: 98%;
+	padding-top: 1em;	
+}
+
+.issues{
+	border: 1px dotted #EAEACB;
+	border-collapse: collapse;
+	
+	margin-left: 2em;
+	width: 95%;
+	margin-top: 2em;
+}
+
+.headerrow{
+	background: #EAEACB;	
+	border-bottom: 1px dashed black;
+
+}
+#issueid{
+	
+	width: 20px;
+}
+
+.darklink{
+	font-size: 1em;
+	color: black;	
+}
+.tablehover{ background: #B4E1C5}

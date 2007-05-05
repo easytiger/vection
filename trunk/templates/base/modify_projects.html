@@ -1,0 +1,29 @@
+{% extends "base/vection.html" %}
+
+{% block title %} Create A New Project {% endblock %}
+
+
+{% block content %}
+{% block heading %} {% endblock %}
+
+{% if user.is_superuser %}
+<h1 class="formheadings">{{ request.heading }}</h1>
+<div id="project_list_box">
+ <form method="POST" action"." id="project_form">
+ <table>
+	
+	{{form.as_table }}
+	<tr><td>&nbsp;</td><td><input type="submit" value="Continue" /></td>
+ </table>
+
+ </form>
+
+</div>
+
+{% else%}
+
+ <br/><h3 class="formheadings">You do not have permission to perform this action</h3>
+ <br /><p class="formheadings">Please login or gain superuser status</p>
+
+{% endif %}
+{% endblock %}

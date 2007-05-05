@@ -1,0 +1,306 @@
+.
+|-- hello.png
+|-- media
+|   |-- css -> /usr/lib/python2.3/site-packages/django/contrib/admin/media/css
+|   |-- images
+|   |   |-- base
+|   |   |   |-- back.png
+|   |   |   |-- grad_back.gif
+|   |   |   |-- menu-background.png
+|   |   |   |-- menu-hover.png
+|   |   |   |-- mini_back.png
+|   |   |   |-- user_tools_back.png
+|   |   |   |-- user_tools_back2.png
+|   |   |   `-- v2.png
+|   |   |-- corners.png
+|   |   |-- grad1.png
+|   |   |-- icons
+|   |   |   |-- mini
+|   |   |   |   |-- action_back.gif
+|   |   |   |   |-- action_forward.gif
+|   |   |   |   |-- action_go.gif
+|   |   |   |   |-- action_paste.gif
+|   |   |   |   |-- action_print.gif
+|   |   |   |   |-- action_refresh.gif
+|   |   |   |   |-- action_refresh_blue.gif
+|   |   |   |   |-- action_save.gif
+|   |   |   |   |-- action_stop.gif
+|   |   |   |   |-- application_dreamweaver.gif
+|   |   |   |   |-- application_firefox.gif
+|   |   |   |   |-- application_flash.gif
+|   |   |   |   |-- arrow_down.gif
+|   |   |   |   |-- arrow_left.gif
+|   |   |   |   |-- arrow_right.gif
+|   |   |   |   |-- arrow_up.gif
+|   |   |   |   |-- box.gif
+|   |   |   |   |-- calendar.gif
+|   |   |   |   |-- comment.gif
+|   |   |   |   |-- comment_blue.gif
+|   |   |   |   |-- comment_delete.gif
+|   |   |   |   |-- comment_new.gif
+|   |   |   |   |-- comment_yellow.gif
+|   |   |   |   |-- copy.gif
+|   |   |   |   |-- cut.gif
+|   |   |   |   |-- date.gif
+|   |   |   |   |-- date_delete.gif
+|   |   |   |   |-- date_new.gif
+|   |   |   |   |-- famfamfam_mini_icons.zip
+|   |   |   |   |-- file_acrobat.gif
+|   |   |   |   |-- file_font.gif
+|   |   |   |   |-- file_font_truetype.gif
+|   |   |   |   |-- flag_blue.gif
+|   |   |   |   |-- flag_green.gif
+|   |   |   |   |-- flag_orange.gif
+|   |   |   |   |-- flag_red.gif
+|   |   |   |   |-- flag_white.gif
+|   |   |   |   |-- folder.gif
+|   |   |   |   |-- folder_delete.gif
+|   |   |   |   |-- folder_images.gif
+|   |   |   |   |-- folder_lock.gif
+|   |   |   |   |-- folder_new.gif
+|   |   |   |   |-- folder_page.gif
+|   |   |   |   |-- icon_accept.gif
+|   |   |   |   |-- icon_airmail.gif
+|   |   |   |   |-- icon_alert.gif
+|   |   |   |   |-- icon_attachment.gif
+|   |   |   |   |-- icon_clock.gif
+|   |   |   |   |-- icon_component.gif
+|   |   |   |   |-- icon_download.gif
+|   |   |   |   |-- icon_email.gif
+|   |   |   |   |-- icon_extension.gif
+|   |   |   |   |-- icon_favourites.gif
+|   |   |   |   |-- icon_get_world.gif
+|   |   |   |   |-- icon_history.gif
+|   |   |   |   |-- icon_home.gif
+|   |   |   |   |-- icon_info.gif
+|   |   |   |   |-- icon_key.gif
+|   |   |   |   |-- icon_link.gif
+|   |   |   |   |-- icon_mail.gif
+|   |   |   |   |-- icon_monitor_mac.gif
+|   |   |   |   |-- icon_monitor_pc.gif
+|   |   |   |   |-- icon_network.gif
+|   |   |   |   |-- icon_package.gif
+|   |   |   |   |-- icon_package_get.gif
+|   |   |   |   |-- icon_package_open.gif
+|   |   |   |   |-- icon_padlock.gif
+|   |   |   |   |-- icon_security.gif
+|   |   |   |   |-- icon_settings.gif
+|   |   |   |   |-- icon_user.gif
+|   |   |   |   |-- icon_wand.gif
+|   |   |   |   |-- icon_world.gif
+|   |   |   |   |-- icon_world_dynamic.gif
+|   |   |   |   |-- image.gif
+|   |   |   |   |-- image_new.gif
+|   |   |   |   |-- interface_browser.gif
+|   |   |   |   |-- interface_dialog.gif
+|   |   |   |   |-- interface_installer.gif
+|   |   |   |   |-- list_comments.gif
+|   |   |   |   |-- list_components.gif
+|   |   |   |   |-- list_errors.gif
+|   |   |   |   |-- list_extensions.gif
+|   |   |   |   |-- list_images.gif
+|   |   |   |   |-- list_keys.gif
+|   |   |   |   |-- list_links.gif
+|   |   |   |   |-- list_packages.gif
+|   |   |   |   |-- list_security.gif
+|   |   |   |   |-- list_settings.gif
+|   |   |   |   |-- list_users.gif
+|   |   |   |   |-- list_world.gif
+|   |   |   |   |-- note.gif
+|   |   |   |   |-- note_delete.gif
+|   |   |   |   |-- note_new.gif
+|   |   |   |   |-- page.gif
+|   |   |   |   |-- page_alert.gif
+|   |   |   |   |-- page_attachment.gif
+|   |   |   |   |-- page_bookmark.gif
+|   |   |   |   |-- page_boy.gif
+|   |   |   |   |-- page_code.gif
+|   |   |   |   |-- page_colors.gif
+|   |   |   |   |-- page_component.gif
+|   |   |   |   |-- page_cross.gif
+|   |   |   |   |-- page_delete.gif
+|   |   |   |   |-- page_deny.gif
+|   |   |   |   |-- page_down.gif
+|   |   |   |   |-- page_dynamic.gif
+|   |   |   |   |-- page_edit.gif
+|   |   |   |   |-- page_extension.gif
+|   |   |   |   |-- page_favourites.gif
+|   |   |   |   |-- page_find.gif
+|   |   |   |   |-- page_flash.gif
+|   |   |   |   |-- page_girl.gif
+|   |   |   |   |-- page_html.gif
+|   |   |   |   |-- page_java.gif
+|   |   |   |   |-- page_key.gif
+|   |   |   |   |-- page_left.gif
+|   |   |   |   |-- page_link.gif
+|   |   |   |   |-- page_lock.gif
+|   |   |   |   |-- page_new.gif
+|   |   |   |   |-- page_next.gif
+|   |   |   |   |-- page_package.gif
+|   |   |   |   |-- page_php.gif
+|   |   |   |   |-- page_prev.gif
+|   |   |   |   |-- page_refresh.gif
+|   |   |   |   |-- page_right.gif
+|   |   |   |   |-- page_script.gif
+|   |   |   |   |-- page_security.gif
+|   |   |   |   |-- page_settings.gif
+|   |   |   |   |-- page_sound.gif
+|   |   |   |   |-- page_tag_blue.gif
+|   |   |   |   |-- page_tag_red.gif
+|   |   |   |   |-- page_text.gif
+|   |   |   |   |-- page_text_delete.gif
+|   |   |   |   |-- page_tick.gif
+|   |   |   |   |-- page_tree.gif
+|   |   |   |   |-- page_up.gif
+|   |   |   |   |-- page_url.gif
+|   |   |   |   |-- page_user.gif
+|   |   |   |   |-- page_user_dark.gif
+|   |   |   |   |-- page_user_light.gif
+|   |   |   |   |-- page_video.gif
+|   |   |   |   |-- page_wizard.gif
+|   |   |   |   |-- readme.txt
+|   |   |   |   |-- table.gif
+|   |   |   |   |-- table_delete.gif
+|   |   |   |   `-- tables.gif
+|   |   |   |-- priority
+|   |   |   |   |-- blue.gif
+|   |   |   |   |-- green.gif
+|   |   |   |   |-- orange.gif
+|   |   |   |   |-- red.gif
+|   |   |   |   `-- yellow.gif
+|   |   |   |-- rss
+|   |   |   |   |-- feed-icon-10x10.png
+|   |   |   |   |-- feed-icon-12x12.png
+|   |   |   |   |-- feed-icon-14x14.png
+|   |   |   |   |-- feed-icon-16x16.png
+|   |   |   |   |-- feed-icon-24x24.png
+|   |   |   |   `-- feed-icon-32x32.png
+|   |   |   `-- uploads
+|   |   |-- linux-penguin-small.jpg
+|   |   |-- login
+|   |   |   |-- back.png
+|   |   |   |-- dash.png
+|   |   |   |-- dback.png
+|   |   |   |-- login_tmp.htm
+|   |   |   |-- login_tmp_r1_c1.png
+|   |   |   |-- login_tmp_r2_c1.png
+|   |   |   |-- login_tmp_r2_c2.png
+|   |   |   |-- login_tmp_r2_c3.png
+|   |   |   |-- login_tmp_r3_c1.png
+|   |   |   `-- vection2_large_logo.png
+|   |   |-- rc
+|   |   |   |-- rc_simple_botLeft.gif
+|   |   |   `-- rc_simple_botLeft.png
+|   |   `-- v2.png
+|   |-- js
+|   |   |-- builder.js
+|   |   |-- controls.js
+|   |   |-- dragdrop.js
+|   |   |-- effects.js
+|   |   |-- highlight
+|   |   |   |-- AUTHORS.en.txt
+|   |   |   |-- AUTHORS.ru.txt
+|   |   |   |-- LICENSE
+|   |   |   |-- highlight.js
+|   |   |   |-- languages
+|   |   |   |   |-- 1c.js
+|   |   |   |   |-- axapta.js
+|   |   |   |   |-- cpp.js
+|   |   |   |   |-- delphi.js
+|   |   |   |   |-- html.js
+|   |   |   |   |-- java.js
+|   |   |   |   |-- javascript.js
+|   |   |   |   |-- perl.js
+|   |   |   |   |-- php.js
+|   |   |   |   |-- python.js
+|   |   |   |   |-- rib.js
+|   |   |   |   |-- rsl.js
+|   |   |   |   |-- ruby.js
+|   |   |   |   |-- smalltalk.js
+|   |   |   |   |-- sql.js
+|   |   |   |   `-- vbscript.js
+|   |   |   |-- readme.eng.txt
+|   |   |   |-- readme.rus.txt
+|   |   |   |-- sample.css
+|   |   |   |-- test.html
+|   |   |   `-- wp_highlight.js.php
+|   |   |-- scriptaculous.js
+|   |   |-- slider.js
+|   |   `-- unittest.js
+|   |-- media
+|   |   `-- images
+|   |       `-- icons
+|   |           `-- uploads
+|   |               |-- orange.gif
+|   |               |-- orange_.gif
+|   |               |-- orange__.gif
+|   |               `-- red.gif
+|   |-- vection.css
+|   `-- vection.css~
+|-- modelviz.py
+|-- rc_simple_botLeft.gif
+|-- settings.py
+|-- templates
+|   |-- base
+|   |   |-- edit_project.html
+|   |   |-- edit_project.html~
+|   |   |-- issues
+|   |   |   |-- closed_project_issues.html
+|   |   |   |-- new_issue.html
+|   |   |   |-- project_issues.html
+|   |   |   |-- project_issues.html~
+|   |   |   |-- view_issue.html
+|   |   |   `-- view_issue.html~
+|   |   |-- modify_projects.html
+|   |   |-- modify_projects.html~
+|   |   |-- new_component.html
+|   |   |-- new_project.html
+|   |   |-- new_project.html~
+|   |   |-- new_version.html
+|   |   |-- vection.html
+|   |   |-- vection.html~
+|   |   |-- vection_home.html
+|   |   |-- vection_home.html~
+|   |   |-- vection_project_detail.html
+|   |   |-- vection_project_detail.html~
+|   |   |-- vection_projects_all.html
+|   |   `-- vection_projects_all.html~
+|   |-- login.html
+|   |-- media.html
+|   |-- registration
+|   |   |-- login.html
+|   |   `-- login.html~
+|   |-- test.html
+|   `-- vection.html
+|-- tmp
+|-- tmp.dot
+|-- tree
+`-- vection_01
+    |-- __init__.py
+    |-- __init__.pyc
+    |-- core
+    |   |-- __init__.py
+    |   |-- __init__.pyc
+    |   |-- feeds.py
+    |   |-- feeds.pyc
+    |   |-- feeds.py~
+    |   |-- forms.py
+    |   |-- forms.pyc
+    |   |-- forms.py~
+    |   |-- models.py
+    |   |-- models.pyc
+    |   |-- models.py~
+    |   |-- views.py
+    |   |-- views.pyc
+    |   `-- views.py~
+    |-- manage.py
+    |-- modelviz.py
+    |-- modelviz.pyc
+    |-- settings.py
+    |-- settings.pyc
+    |-- settings.py~
+    |-- urls.py
+    |-- urls.pyc
+    `-- urls.py~
+
+23 directories, 280 files

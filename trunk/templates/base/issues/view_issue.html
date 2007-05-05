@@ -1,0 +1,136 @@
+
+{% extends "base/vection.html" %}
+{% load contrib.markup %}
+
+
+{% block title %}
+{{issue.title }} ::
+{% endblock %}
+{% block content %}
+
+
+<div id="project_list_box" style="border: 1px solid #9BC40E">
+
+ <h3 class="headings" >
+    <a href="/vection/projects/">All Projects </a>::
+ 	<a href="/vection/issues/{{ issue.project }}">{{ issue.project }}  </a>::
+ 	<a href="/vection/comp-issues/{{ issue.sub_component.id }}">{{ issue.sub_component.name }}  </a>::
+ 	Issue {{ issue.tag }}
+ </h3>
+</div>
+
+<div id="project_list_box">
+
+ <h1 class="headings">
+ <a href="/vection/feeds/all_issues/"><img src='/media/images/icons/rss/feed-icon-16x16.png'></img></a>
+  Issue {{ issue.tag }}
+  
+  {% if issue.status.is_closed %} 
+  	<font style="font-size: small; color: red;">
+  	This Issue Has Been Closed <em> ({{ issue.resolution }})</em></font>
+  {% endif %}
+  
+ </h1><br/>
+
+</div>
+
+<div id="project_list_box" style="border: 1px solid #9BC40E">
+
+<div class='issueProperties'>
+
+ <table  border='0'>
+   <tr>
+     <td  colspan="4"><h2>{{issue.title}} </h2></td>
+   </tr>
+   
+   <tr><td colspan="4">&nbsp;</td></tr>
+   
+   <tr>
+     
+     <th>Created:</th>
+     <td>{# issue.created|date:"F j, Y" #}{{ issue.created|timesince }} ago</td>
+     
+     <th>Creator: </th>
+     <td>{{ issue.created_by.fullname }}</td>
+    </tr>
+
+   
+   <tr>
+     <th>Project:</th>
+     <td><a title="View {{ pro.name }}" href="/vection/projects/{{ issue.project.name }}">{{ issue.project.name }}</a></td>
+     
+     <th>Version:</th>
+     <td>{{ issue.version.name }}</td>
+   </tr>
+   
+    <tr>
+     <th>Component:</th>
+     <td>{{ issue.sub_component.name }}</td>
+     
+     <th>Status:</th>
+     <td><img src="{{ issue.status.icon}}"></img> {{ issue.status.status }}</td>
+   </tr>
+   
+    <tr>
+     <th>Issue Type:</th>
+     <td>{{ issue.issue_type.type }}</td>
+     
+     <th>Priority:</th>
+     <td><img src="{{ issue.priority.icon}}"></img> {{ issue.priority.name }}</td>
+   </tr>
+   
+    <tr>
+     <th>Responsible Engineer:</th>
+     <td>{{ issue.responsible_user.fullname }}</td>
+     
+     <th>Last Updated:</th>
+     <td>{# issue.last_updated|date:"j F, Y: P" #}{{issue.last_updated|timesince}}</td>
+   </tr>
+    
+   <tr>
+     <th>Environment:</th>
+     <td>{{ issue.environment|escape}}</td>
+     <th>Due Date: </th>
+     <td>{{ issue.due_date|timeuntil }}</td>
+   </tr>
+   
+ </table>
+</div>
+
+
+</div>
+
+<div id="project_list_box">
+
+<h3 class="headings">Description</h3>
+{{ issue.description|escape|linebreaks|markdown|urlize}}
+
+</div>
+
+
+{% for update in issue.issueupdate_set.all %}
+<div id="update_box">
+ <h3 class="headings">{{update.user.fullname}} - <span class="edit">{{update.made|timesince}} ago</span></i></h3>
+ 
+  <p class="comment">{{ update.fields|markdown }}</p>
+<div id="inner_update_box">  
+  <p class="comment">{{ update.comment|markdown }}</p>
+ </div>
+ <p class="edit">{{update.made|date:"j F, Y: P" }}
+ (<a title="Visit User Page" href="/vection/users/{{ issue.responsible_user.user.username }}">{{ update.user.user.username }}</a> {{ update.user.user.email }})
+ </p>
+</div>
+
+{%endfor%}
+<div id="project_list_box">
+<form method="post" action"." id="project_form">
+<table>
+<tr><th colspan=2>Update Issue {{ issue.tag }}:</th></tr>
+{{ form.as_table }}
+<tr><td>&nbsp;</td>
+<td><input type="submit" value="Submit" /></td>
+
+</table>
+</form>
+</div>
+{% endblock %}

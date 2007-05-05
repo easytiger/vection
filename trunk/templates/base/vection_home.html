@@ -1,0 +1,36 @@
+{% extends "base/vection.html" %}
+
+{% block title %}
+
+{{ user.username }}'s portal ::
+
+{% endblock %}
+
+{% block content %}
+
+<div id="project_list_box">
+<h2 class="headings">
+{{ user.first_name}}, you have {{ user.get_profile.open_issue_count }} Open issues to review:
+</h2>
+
+{% for i in issues %}
+<div id="update_box">
+<p> 
+<font style="font-size:xx-small;">
+<em>{{ i.issue_type }}</em>
+<a class="edit" href="/vection/issues/{{ i.id }}">{{ i.tag }} </a>
+	
+	
+	{{i.description|truncatewords:"13"}}
+	<img src="{{ i.priority.icon }}"/> {{ i.priority }}
+	<img src="{{ i.status.icon }}"/>  {{ i.status }}
+</p>
+</div>
+
+{% endfor%}
+
+</div>
+
+
+{% endblock %}
+

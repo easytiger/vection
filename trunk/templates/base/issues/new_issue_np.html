@@ -1,0 +1,26 @@
+{% extends "base/vection.html" %}
+
+{% block title %}
+
+{{ user.username }}'s portal ::
+
+{% endblock %}
+
+{% block content %}
+
+<div id="itemlister_left">
+<h1 class="headings">
+	Select Project To Create New Issue:<br/>
+		
+</h1>
+{% for p in projects %}
+<div id="update_box">
+	<h3 class="headings">
+		<a href="/vection/new-issue/{{ p }}">{{ p }}</a>
+		<font style="font-size: x-small"> - {{ p.desc|escape|truncatewords:"14"}}</font>
+	</h3>
+</div>
+{% endfor%}
+</div>
+
+{% endblock %}
