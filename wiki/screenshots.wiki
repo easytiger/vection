@@ -19,7 +19,7 @@ http://farm1.static.flickr.com/184/484824294_5f9519b6e2_o.jpg
 
 = An Issue =
 
-http://farm1.static.flickr.com/184/484824294_5f9519b6e2_o.jpg
+http://farm1.static.flickr.com/172/484824292_d435ba02a9_o.jpg
 
 = Overview =
 
@@ -29,5 +29,4 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
