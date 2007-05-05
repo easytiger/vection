@@ -2,6 +2,8 @@
 """Django model to DOT (Graphviz) converter
 by Antonio Cavedoni <antonio@cavedoni.org>
 
+
+
 Make sure your DJANGO_SETTINGS_MODULE is set to your project and call 
 the script like this:
 
